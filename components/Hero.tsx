@@ -167,21 +167,21 @@ export function Hero() {
                             <div key={model.id} className="w-full h-full flex-shrink-0 flex items-center justify-center">
                                 {model.id === "pro" && (
                                     <VideoPlayer
-                                        src="/videos/sTread_shadow.webm"
+                                        src="s3://sportstech.team/videos/sTread_Shadow.webm"
                                         className="scale-125 -translate-y-4"
                                         isActive={activeModel === model.id}
                                     />
                                 )}
                                 {model.id === "row" && (
                                     <VideoPlayer
-                                        src="/videos/sRow_UIUX_animation.webm"
+                                        src="s3://sportstech.team/videos/sRow_UIUX_Animation.webm"
                                         className="scale-140 -translate-y-20 md:-translate-y-32 xl:-translate-y-25"
                                         isActive={activeModel === model.id}
                                     />
                                 )}
                                 {model.id === "bike" && (
                                     <VideoPlayer
-                                        src="/videos/sBike_UIUX_animation.webm"
+                                        src="s3://sportstech.team/videos/sBike_UIUX_Animation.webm"
                                         className="scale-125 -translate-y-4 md:scale-100 md:-translate-y-6"
                                         isActive={activeModel === model.id}
                                     />
