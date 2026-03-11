@@ -76,7 +76,7 @@ function VideoPlayer({ src, isActive, onEnded, className = "" }: VideoPlayerProp
         <video
             ref={videoRef}
             src={src}
-            className={`w-full h-full object-contain drop-shadow-2xl ${className}`}
+            className={`w-full h-full ${className}`}
             muted
             playsInline
             loop
@@ -160,29 +160,29 @@ export function Hero() {
                 {/* Product Image */}
                 <div className="relative h-[60vh] w-full min-h-0 overflow-hidden">
                     <div
-                        className="flex w-full h-full transition-transform duration-700 ease-in-out will-change-transform"
+                        className="flex w-full h-full transition-transform duration-700 ease-in-out will-change-transform "
                         style={{ transform: `translateX(-${MODELS.findIndex(m => m.id === activeModel) * 100}%)` }}
                     >
                         {MODELS.map((model) => (
-                            <div key={model.id} className="w-full h-full flex-shrink-0 flex items-center justify-center">
+                            <div key={model.id} className="w-full h-full flex-shrink-0 flex items-center justify-center ">
                                 {model.id === "pro" && (
                                     <VideoPlayer
-                                        src="https://s3.us-east-1.amazonaws.com/sportstech.team/videos/sTread_Shadow.webm"
-                                        className="scale-125 -translate-y-4"
+                                        src="/videos/sTread.webm"
+                                        className="scale-120 -translate-y-4"
                                         isActive={activeModel === model.id}
                                     />
                                 )}
                                 {model.id === "row" && (
                                     <VideoPlayer
                                         src="https://s3.us-east-1.amazonaws.com/sportstech.team/videos/sRow_UIUX_Animation.webm"
-                                        className="scale-140 -translate-y-20 md:-translate-y-32 xl:-translate-y-25"
+                                        className=" scale-130 -translate-y-20 md:-translate-y-32 xl:-translate-y-25"
                                         isActive={activeModel === model.id}
                                     />
                                 )}
                                 {model.id === "bike" && (
                                     <VideoPlayer
                                         src="https://s3.us-east-1.amazonaws.com/sportstech.team/videos/sBike_UIUX_Animation.webm"
-                                        className="scale-125 -translate-y-4 md:scale-100 md:-translate-y-6"
+                                        className="scale-130 -translate-y-4 md:scale-100 md:-translate-y-6"
                                         isActive={activeModel === model.id}
                                     />
                                 )}
